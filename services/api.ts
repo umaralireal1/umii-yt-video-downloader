@@ -9,7 +9,7 @@ export const apiClient = axios.create({
   headers: {
     'Content-Type': 'application/json',
   },
-  timeout: 18000, // 18 seconds (accounting for multi-step extraction)
+  timeout: 30000, // Increased to 30 seconds for multi-instance retries
 });
 
 export const fetchVideoInfo = async (url: string): Promise<VideoData> => {
